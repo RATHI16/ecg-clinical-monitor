@@ -5,6 +5,7 @@ import PatientCard from './components/PatientCard'
 import MetricsPanel from './components/MetricsPanel'
 import AIStatus from './components/AIStatus'
 import SignalQuality from './components/SignalQuality'
+import MLFeaturesDashboard from './components/MLFeaturesDashboard'
 import PatientManager from './components/PatientManager'
 import RecordingPanel from './components/RecordingPanel'
 import DemoPanel from './components/DemoPanel'
@@ -179,6 +180,13 @@ export default function App() {
             <MetricsPanel metrics={metrics} />
             <AIStatus pWaveAnalysis={pWaveAnalysis} />
             <SignalQuality quality={signalQuality} rawPacket={rawPacket} />
+          </div>
+          <div className="dashboard-ml">
+            <MLFeaturesDashboard
+              ecgData={ecgData}
+              metrics={metrics}
+              pWaveAnalysis={pWaveAnalysis}
+            />
           </div>
         </main>
       </div>
